@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';  // motion kütüphanesini buraya ekliyoruz
+import { motion } from 'framer-motion';  
 import { AnimatedCircularProgressBar } from './magicui/animated-circular-progress-bar';
 
 export default function Timer({ customMin }: { customMin: number }) {
@@ -46,15 +46,13 @@ export default function Timer({ customMin }: { customMin: number }) {
     audio.currentTime = 0;
   };
 
-  // Progress bar için zamanın ne kadarını bitirdiğimizi hesaplamak
-  // customMin'i saniye cinsinden çeviriyoruz, ve dolayısıyla 0'a ulaştıkça %100'den %0'a iniyor.
-  const totalSeconds = customMin * 60; // toplam saniye
-  const remainingSeconds = minutes * 60 + seconds; // kalan saniye
-  const progressValue = ((totalSeconds - remainingSeconds) / totalSeconds) * 100; // %100'e kadar
+  const totalSeconds = customMin * 60; 
+  const remainingSeconds = minutes * 60 + seconds; 
+  const progressValue = ((totalSeconds - remainingSeconds) / totalSeconds) * 100; 
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <motion.h1 className="text-4xl font-bold bg-amber-200 p-5 rounded-2xl text-black "
+      <motion.h1 className="text-4xl font-bold bg-amber-200 p-5 rounded-2xl text-black"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -75,14 +73,15 @@ export default function Timer({ customMin }: { customMin: number }) {
         </button>
       </motion.div>
 
-      {/* Animated Circular Progress Bar */}
-      <AnimatedCircularProgressBar 
+     <div className="mt-3">
+     <AnimatedCircularProgressBar 
         max={100} 
         min={0} 
         value={progressValue}
         gaugePrimaryColor='#30545e' 
         gaugeSecondaryColor='#dcc331' 
       />
+     </div>
     </div>
   );
 }
