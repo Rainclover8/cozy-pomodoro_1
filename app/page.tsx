@@ -12,7 +12,7 @@ export default function Home() {
   // SES
   // 5 DAKİKA ARASI
   // VE BİTİŞ
-  function handleClick(e) {
+  function handleClick(e: any) {
     const newValue = Number(e.currentTarget.dataset.value);
     setValue(newValue);
     console.log(newValue);

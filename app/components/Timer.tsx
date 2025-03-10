@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from 'react';
 
-export default function Timer({customMin}) {
+export default function Timer({customMin} : any) {
   const [minutes, setMinutes] = useState(customMin);
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    let interval;
+    let interval:any;
     if (isActive) {
       interval = setInterval(() => {
         if (seconds === 0) {
@@ -16,7 +16,7 @@ export default function Timer({customMin}) {
             clearInterval(interval);
             setIsActive(false);
           } else {
-            setMinutes((prevMinutes) => prevMinutes - 1);
+            setMinutes((prevMinutes:any) => prevMinutes - 1);
             setSeconds(59);
           }
         } else {
