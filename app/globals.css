@@ -132,3 +132,11 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+.mainText{
+  font-family: 'Indie Flower', cursive;
+  font-size: 4rem;
+  letter-spacing: 20px;
+  text-align: center;
+}
