@@ -3,7 +3,9 @@ import Image from "next/image";
 import Timer from "./components/Timer";
 import { useState } from "react";
 import First from "@/public/25.png";
-import { motion } from "framer-motion";
+import Second from "@/public/15.png";
+import Third from "@/public/5.png";
+import Button from "./components/Button";
 export default function Home() {
   const [value, setValue] = useState(0);
   //  SÜRELER EKLENECEK
@@ -20,23 +22,25 @@ export default function Home() {
     <>
       <div className="overflow-hidden max-h-screen">
         <div className="">
-          <h1 className="text-center text-4xl font-bold mt-24 leading-tight uppercase">Cozy Pomodoro</h1>
+          <h1 className="text-center text-6xl font-extrabold mt-24 uppercase bg-gradient-to-b from-fuchsia-700 border-t-indigo-500 bg-clip-text text-transparent ">Cozy Pomodoro</h1>
         </div>
 
-        <motion.button data-value="1" onClick={handleClick} className="absolute top-40 left-24 drop-shadow-2xl shadow-white"
-        initial={{scale: 0, x:200, y:-200}}
-        animate={{scale: 1, x:0, y:0}}
-        transition={{duration: 0.5}}
-        >
-          <Image src={First} width={150} height={150} alt="25 Min" className="w-auto h-auto" />
-        </motion.button>
-      {value === 0 ? (
-        <div className="flex justify-center items-center h-screen font-black text-4xl">
-          Süre Seçiniz
-        </div>
-      ) : (
-        <Timer customMin={value} />
-      )}
+        <Button image={First} className="" min="4" handleClick={handleClick} />
+
+
+        <Button image={Second} className=" right-20 top-45" min="15" handleClick={handleClick} />
+
+        <Button image={Third} className=" top-1/3 left-1/3" min="5" handleClick={handleClick} />
+
+
+        {value === 0 ? (
+          <div className="flex justify-center items-center h-screen font-black text-4xl">
+            Süre Seçiniz
+          </div>
+        ) : (
+          <Timer customMin={value} />
+        )}
+
       </div>
     </>
   );
