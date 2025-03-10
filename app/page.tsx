@@ -8,7 +8,7 @@ import Button from "./components/Button";
 import { motion } from "framer-motion";
 export default function Home() {
   const [value, setValue] = useState(0);
-  
+
   function handleClick(e: any) {
     const newValue = Number(e.currentTarget.dataset.value);
     setValue(newValue);
@@ -27,12 +27,12 @@ export default function Home() {
           >Cozy Pomodoro</motion.h1>
         </div>
 
-        <Button image={First} className="" min="25" handleClick={handleClick} />
+        <Button image={First} min="25" handleClick={handleClick} />
 
 
-        <Button image={Second} className=" md:right-20 right-10 top-45" min="15" handleClick={handleClick} />
+        <Button image={Second} className=" md:right-20 right-10 md:top-45 top-74" min="15" handleClick={handleClick} />
 
-        <Button image={Third} className=" top-1/3 left-1/3" min="5" handleClick={handleClick} />
+        <Button image={Third} className=" md:top-1/3 md:left-1/3 left-20 top-85 " min="5" handleClick={handleClick} />
 
 
         {value === 0 ? (
