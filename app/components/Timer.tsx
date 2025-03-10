@@ -80,8 +80,8 @@ export default function Timer({ customMin }: { customMin: number }) {
         max={100} 
         min={0} 
         value={progressValue}
-        gaugePrimaryColor='red' 
-        gaugeSecondaryColor='blue' 
+        gaugePrimaryColor='#30545e' 
+        gaugeSecondaryColor='#dcc331' 
       />
     </div>
   );
