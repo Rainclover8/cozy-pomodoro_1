@@ -22,7 +22,7 @@ export default function Home() {
       <div className="">
         <div className="">
           <h1 className="text-center text-4xl font-bold mt-24 leading-tight uppercase">Cozy Pomodoro</h1>
-        </div>
+        </div>Ğ
 
         <button data-value="1" onClick={handleClick} className="absolute top-40 left-24 drop-shadow-2xl shadow-white">
           <Image src={First} width={150} height={150} alt="25 Min" className="w-auto h-auto" />
