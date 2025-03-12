@@ -13,7 +13,7 @@ export default function Home() {
     const newValue = Number(e.currentTarget.dataset.value);
     setValue(newValue);
   }
-// Tamamlandı sanırım
+
   return (
     <>
       <div className="overflow-hidden max-h-screen">
