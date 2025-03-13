@@ -13,6 +13,7 @@ export default function Home() {
     const newValue = Number(e.currentTarget.dataset.value);
     setValue(newValue);
   }
+// Eklemeler gerekiyor 
 
   return (
     <>
@@ -26,7 +27,7 @@ export default function Home() {
             transition={{ duration: 4 }}
           >Cozy Pomodoro</motion.h1>
         </div>
-
+      
         <Button image={First} min="25" handleClick={handleClick} />
 
 
