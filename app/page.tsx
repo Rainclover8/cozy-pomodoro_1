@@ -13,7 +13,6 @@ export default function Home() {
     const newValue = Number(e.currentTarget.dataset.value);
     setValue(newValue);
   }
-// Eklemeler gerekiyor 
 
   return (
     <>
